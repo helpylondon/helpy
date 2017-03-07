@@ -53,6 +53,12 @@ a {
   justify-content: center;
 }
 
+.expand {
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  top: 80px;
+}
 
 .lee {
   background: url('../public/img/lee.jpg');
