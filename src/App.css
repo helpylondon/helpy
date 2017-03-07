@@ -17,14 +17,6 @@ a {
   color: #fb3958;
 }
 
-.header {
-  position: fixed;
-  width: 100%;
-  height: 70px;
-  background-color: #fff;
-  z-index: 999;
-}
-
 .map {
   position: relative;
   width: 100%;
