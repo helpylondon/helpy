@@ -23,11 +23,10 @@ class App extends Component {
           </ReactMapboxGl>
         </div>
         <section className="profiles">
-          <div className="profile"></div>
-          <div className="profile"></div>
-          <div className="profile"></div>
-          <div className="profile"></div>
-          <div className="profile"></div>
+          <div className="profile v-align lee"><h3>Lee</h3></div>
+          <div className="profile v-align james"><h3>James</h3></div>
+          <div className="profile v-align henrique"><h3>Henrique</h3></div>
+          <div className="profile v-align casey"><h3>Casey</h3></div>
         </section>
       </article>
     );
