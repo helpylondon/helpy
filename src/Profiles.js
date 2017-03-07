@@ -7,6 +7,12 @@ class Profiles extends React.Component {
   componentDidMount() {
     new Swiper('.profiles', {
       slidesPerView: 4,
+      keyboardControl: true,
+      paginationClickable: true,
+      grabCursor: true,
+      loop: false,
+      nextButton: '.button-next',
+      prevButton: '.button-prev',
 
       // Responsive breakpoints
       breakpoints: {
@@ -31,27 +37,31 @@ class Profiles extends React.Component {
 
   render() {
     return (
-      <div className="profiles">
-        <div className="swiper-wrapper profiles">
-          <div className="swiper-slide">
-            <div className="profile v-align lee"><h3>Lee</h3></div>
-          </div>
-          <div className="swiper-slide">
-            <div className="profile v-align james"><h3>James</h3></div>
-          </div>
-          <div className="swiper-slide">
-            <div className="profile v-align henrique"><h3>Henrique</h3></div>
-          </div>
-          <div className="swiper-slide">
-            <div className="profile v-align casey"><h3>Casey</h3></div>
-          </div>
-          <div className="swiper-slide">
-            <div className="profile v-align james"><h3>James</h3></div>
-          </div>
-          <div className="swiper-slide">
-            <div className="profile v-align lee"><h3>Lee</h3></div>
+      <div className="profiles-wrapper">
+        <div className="profiles">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide">
+              <div className="profile v-align lee"><h2>Lee</h2></div>
+            </div>
+            <div className="swiper-slide">
+              <div className="profile v-align james"><h2>James</h2></div>
+            </div>
+            <div className="swiper-slide">
+              <div className="profile v-align henrique"><h2>Henrique</h2></div>
+            </div>
+            <div className="swiper-slide">
+              <div className="profile v-align casey"><h2>Casey</h2></div>
+            </div>
+            <div className="swiper-slide">
+              <div className="profile v-align james"><h2>James</h2></div>
+            </div>
+            <div className="swiper-slide">
+              <div className="profile v-align lee"><h2>Lee</h2></div>
+            </div>
           </div>
         </div>
+        <div className="button-next"></div>
+        <div className="button-prev"></div>
       </div>
     )
   }

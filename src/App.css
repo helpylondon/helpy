@@ -1,7 +1,7 @@
 @font-face { font-family: SofiaB; src: url('../public/fonts/SofiaProBold.ttf');}
 @font-face { font-family: SofiaR; src: url('../public/fonts/SofiaProRegular.ttf');}
 
-h3 {
+h2 {
   font-family: SofiaR;
 }
 
@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-.profiles h3 {
+.profiles h2 {
   color: #fb3958;
 }
 
@@ -52,6 +52,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 
 .lee {
   background: url('../public/img/lee.jpg');
