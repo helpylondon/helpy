@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactMapboxGl from "react-mapbox-gl";
 
+import Logo from './Logo';
+
 import './App.css';
 
 class App extends Component {
@@ -8,7 +10,7 @@ class App extends Component {
     return (
       <article>
         <header className="header">
-          Logo
+          <Logo fill="#ff3ccc" />
         </header>
         <div className="map">
           <ReactMapboxGl
