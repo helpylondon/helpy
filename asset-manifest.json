@@ -1,6 +1,12 @@
 {
-  "main.css": "static/css/main.dd4743a1.css",
-  "main.css.map": "static/css/main.dd4743a1.css.map",
-  "main.js": "static/js/main.574e0045.js",
-  "main.js.map": "static/js/main.574e0045.js.map"
+  "main.css": "static/css/main.eea3012a.css",
+  "main.css.map": "static/css/main.eea3012a.css.map",
+  "main.js": "static/js/main.326ab01c.js",
+  "main.js.map": "static/js/main.326ab01c.js.map",
+  "static/media/SofiaProBold.ttf": "static/media/SofiaProBold.c71b2054.ttf",
+  "static/media/SofiaProRegular.ttf": "static/media/SofiaProRegular.9983f4f2.ttf",
+  "static/media/casey.jpg": "static/media/casey.97548266.jpg",
+  "static/media/henrique.jpg": "static/media/henrique.80ac219c.jpg",
+  "static/media/james.jpg": "static/media/james.9a073568.jpg",
+  "static/media/lee.jpg": "static/media/lee.7338e8ee.jpg"
 }
