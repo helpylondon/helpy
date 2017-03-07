@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <article>
         <header className="header">
-          <Logo fill="#ff3ccc" />
+          <div className="logo"><Logo fill="#ff3ccc" /></div>
         </header>
         <div className="map">
           <ReactMapboxGl
