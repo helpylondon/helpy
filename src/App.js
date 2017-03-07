@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import ReactMapboxGl from "react-mapbox-gl";
+import ReactMapboxGl from 'react-mapbox-gl';
 
 import Logo from './Logo';
+import Profiles from './Profiles';
 
 import './App.css';
 
 class App extends Component {
+
   render() {
     return (
       <article>
@@ -22,12 +24,7 @@ class App extends Component {
             }}>
           </ReactMapboxGl>
         </div>
-        <section className="profiles">
-          <div className="profile v-align lee"><h3>Lee</h3></div>
-          <div className="profile v-align james"><h3>James</h3></div>
-          <div className="profile v-align henrique"><h3>Henrique</h3></div>
-          <div className="profile v-align casey"><h3>Casey</h3></div>
-        </section>
+        <Profiles />
       </article>
     );
   }
