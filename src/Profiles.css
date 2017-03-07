@@ -1,8 +1,11 @@
 .profile {
   margin: 20px;
-  width: 25%;
   height: 200px;
   background-color: #ddd;
+}
+
+.swiper-slide {
+  width: 25vw;
 }
 
 .profiles {
