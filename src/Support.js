@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMapboxGl from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl';
 
 // import Profiles from './Profiles';
 
@@ -13,16 +13,42 @@ const mapContainerStyle = {
   width: '100vw'
 };
 
+const styles = {
+  marker: {
+    width: 30,
+    height: 30,
+    borderRadius: '50%',
+    backgroundColor: '#fb3958',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    cursor: 'pointer'
+  },
+  popup: {
+    width: '120px',
+    height: '120px',
+    backgroundColor: '#fff'
+  }
+}
+
 class Support extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { isExpanded: false };
+    this.state = { isExpanded: false, showPopup: false };
   }
 
   onExpand(e) {
     e.preventDefault();
     this.setState({ isExpanded: !this.state.isExpanded });
+  }
+
+  onMarkerOver(e) {
+    this.setState({showPopup: !this.state.showPopup});
+  }
+
+  onMarkerOut(e) {
+    this.setState({showPopup: false});
   }
 
   render() {
@@ -40,6 +66,31 @@ class Support extends React.Component {
             style={mapStyle} // eslint-disable-line react/style-prop-object
             accessToken={accessToken}
             containerStyle={mapContainerStyle}>
+            <div
+              onMouseOver={this.onMarkerOver.bind(this)}
+              onMouseOut={this.onMarkerOut.bind(this)}
+            >
+              <Marker
+                style={styles.marker}
+                coordinates={[-0.12915363615130104,51.51260007442397]}
+                >
+              </Marker>
+            </div>
+
+            {this.state.showPopup &&
+              <Popup
+                key="k"
+                offset={[0, -100]}
+                coordinates={[-0.12915363615130104,51.51260007442397]}
+              >
+                <div style={{
+                  ...styles.popup,
+                  display: this.state.showPopup ? 'block' : 'none'
+                }}>
+                  popup
+                </div>
+              </Popup>
+            }
           </ReactMapboxGl>
         </div>
 
