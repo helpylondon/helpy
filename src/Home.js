@@ -31,11 +31,12 @@ class Home extends React.Component {
               Lee has been on the streets now for 2 years, and wants to become a lifeguard.
             </p>
             <div ref={div => this.btn = div}>
-              <Link to="/Help" className="button hvr-grow">Help Now</Link>
+              <Link to="/profile" className="button hvr-grow">Help Now</Link>
             </div>
           </div>
           <div className="col-xs-12 col-lg-6">
             <img src="/img/lee.jpg" width="100%" className="home-img" ref={div => this.image = div} />
+            {/* <img src="/img/Ivo.jpg" width="100%" className="home-img" ref={div => this.image = div} /> */}
           </div>
         </div>
       </div>

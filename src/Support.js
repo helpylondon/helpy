@@ -15,8 +15,8 @@ const mapContainerStyle = {
 
 const styles = {
   marker: {
-    width: 30,
-    height: 30,
+    width: 15,
+    height: 15,
     borderRadius: '50%',
     backgroundColor: '#fb3958',
     display: 'flex',

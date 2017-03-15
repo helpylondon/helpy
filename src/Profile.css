@@ -1,0 +1,36 @@
+h2 {
+  font-size: 40px;
+  margin-top: 10px !important;
+  color: #fb3958;
+}
+
+p {
+  text-align: left;
+  padding: 0px 40px;
+}
+
+.profile-img {
+  width: 130px;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+.item {
+  position: relative;
+  background-color: #ececec;
+  padding: 10px 20px;
+  height: 80px;
+  margin: 0px 30px;
+}
+
+.item h1 {
+  position: absolute;
+  left: 40px;
+  top: 16px;
+}
+
+.item span {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
