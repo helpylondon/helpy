@@ -20,6 +20,11 @@ class Home extends React.Component {
     				.from(img, 1, { y:500, alpha: 0, ease: Power2.easeInOut}, "-=0.7" )
             .from(btn, 1, { alpha:0 })
 
+            // Animate Out
+            // .to(quote, 1, { x:-300, alpha: 0, ease: Power2.easeInOut}, "+=4" )
+    				// .to(img, 1, { y:-500, alpha: 0, ease: Power2.easeInOut}, "-=0.7" )
+            // .to(btn, 1, { alpha:0 })
+
   }
 
   render() {

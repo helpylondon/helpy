@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl';
+import ReactMapboxGl, { Marker, Popup, Layer } from 'react-mapbox-gl';
 
 // import Profiles from './Profiles';
 
@@ -12,6 +12,9 @@ const mapContainerStyle = {
   height: '100vh',
   width: '100vw'
 };
+
+const zoom = [12];
+const center =  [-0.1153754546049879, 51.493321483821486];
 
 const styles = {
   marker: {
@@ -65,7 +68,9 @@ class Support extends React.Component {
           <ReactMapboxGl
             style={mapStyle} // eslint-disable-line react/style-prop-object
             accessToken={accessToken}
-            containerStyle={mapContainerStyle}>
+            containerStyle={mapContainerStyle}
+            zoom={zoom}
+            center={center}>
             <div
               onMouseOver={this.onMarkerOver.bind(this)}
               onMouseOut={this.onMarkerOut.bind(this)}
