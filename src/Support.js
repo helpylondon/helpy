@@ -11,15 +11,21 @@ class Support extends React.Component {
       <article>
         <div className="support-map">
           <ReactMapboxGl
-            style="mapbox://styles/jamesdovey/ciziu0nhl003r2skfn5vy1u4k" // eslint-disable-line react/style-prop-object
+            style="mapbox://styles/jamesdovey/cj0aygmon003a2sqpyhqc042m" // eslint-disable-line react/style-prop-object
             accessToken="pk.eyJ1IjoiamFtZXNkb3ZleSIsImEiOiJjaXppdHkzNnkwMDQxMzJxcHU2ZDlqc2swIn0.Ure8r4g5Ka4ox2xNFYf5rQ"
             containerStyle={{
-              height: '100vh',
-              width: '100vw'
+              height: '100%',
+              width: '100%'
             }}>
           </ReactMapboxGl>
         </div>
-        <Profiles />
+
+        <div className="row center-xs mt-60">
+          <div className="col-xs-12">
+            <a href="#" id="expand">Expand</a>
+          </div>
+        </div>
+        {/* <Profiles /> */}
       </article>
     )
   }

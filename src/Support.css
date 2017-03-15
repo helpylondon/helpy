@@ -1,7 +1,52 @@
 .support-map {
   position: relative;
+  margin:0 auto;
+  width: 90%;
+  height: 65vh;
+  background-color: whitesmoke;
+  z-index: 1;
+
+  -webkit-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+   -moz-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+     -o-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+        transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+}
+
+.support-map-full {
+  position: absolute;
+  top: 0px;
+  margin:0 auto;
   width: 100%;
   height: 100vh;
   background-color: whitesmoke;
-  z-index: 1;
+  z-index: 9999;
+
+-webkit-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+ -moz-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+   -o-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+      transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+}
+
+#expand {
+  z-index: 99999;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 56.250em) {
+
+}
+
+@media screen and (max-width: 50em) {
+
+  .support-map {
+    position: relative;
+    margin:0 auto;
+    width: 100%;
+    height: 50vh;
+  }
+
 }
