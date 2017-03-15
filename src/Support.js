@@ -15,27 +15,59 @@ const mapContainerStyle = {
 
 const styles = {
   marker: {
-    width: 30,
-    height: 30,
+    width: 20,
+    height: 20,
     borderRadius: '50%',
     backgroundColor: '#fb3958',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    opacity: 0.75
   },
   popup: {
-    width: '120px',
-    height: '120px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    width: '100px',
+    height: '100px',
     backgroundColor: '#fff'
+  },
+  avatar: {
+    width: '60px',
+    height: '60px',
+    borderRadius: '50%',
+    overflow: 'hidden',
+  },
+  name: {
+    marginTop: 5
   }
+};
+
+const data = {
+  markers: [
+    {
+      name: 'John Doe',
+      avatar: '/img/henrique.jpg',
+      coordinates: [-0.12915363615130104,51.51260007442397]
+    },
+    {
+      name: 'James Kelly',
+      avatar: '/img/james.jpg',
+      coordinates: [-0.11084467200137738,51.51653575792807]
+    }
+  ]
 }
 
 class Support extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { isExpanded: false, showPopup: false };
+    this.state = {
+      isExpanded: false,
+      selected: null,
+    };
   }
 
   onExpand(e) {
@@ -43,12 +75,12 @@ class Support extends React.Component {
     this.setState({ isExpanded: !this.state.isExpanded });
   }
 
-  onMarkerOver(e) {
-    this.setState({showPopup: !this.state.showPopup});
+  onMarkerOver(item, e) {
+    this.setState({ selected: item });
   }
 
   onMarkerOut(e) {
-    this.setState({showPopup: false});
+    this.setState({ selected: null });
   }
 
   render() {
@@ -65,29 +97,37 @@ class Support extends React.Component {
           <ReactMapboxGl
             style={mapStyle} // eslint-disable-line react/style-prop-object
             accessToken={accessToken}
-            containerStyle={mapContainerStyle}>
-            <div
-              onMouseOver={this.onMarkerOver.bind(this)}
-              onMouseOut={this.onMarkerOut.bind(this)}
-            >
-              <Marker
-                style={styles.marker}
-                coordinates={[-0.12915363615130104,51.51260007442397]}
-                >
-              </Marker>
-            </div>
+            containerStyle={mapContainerStyle}
+          >
 
-            {this.state.showPopup &&
+            {data.markers.map((item, key) => {
+                item.key = key;
+                return (
+                  <Marker
+                    key={key}
+                    style={styles.marker}
+                    coordinates={item.coordinates}
+                    onMouseEnter={this.onMarkerOver.bind(this, item)}
+                    onMouseLeave={this.onMarkerOut.bind(this)}
+                  >
+                  </Marker>
+                );
+            })}
+
+            {this.state.selected &&
               <Popup
-                key="k"
-                offset={[0, -100]}
-                coordinates={[-0.12915363615130104,51.51260007442397]}
+                key={this.state.selected.key}
+                offset={[0, -80]}
+                coordinates={this.state.selected.coordinates}
               >
                 <div style={{
                   ...styles.popup,
-                  display: this.state.showPopup ? 'block' : 'none'
+                  display: this.state.selected ? 'flex' : 'none'
                 }}>
-                  popup
+                  <div style={styles.avatar}>
+                    <img width="100%" src={this.state.selected.avatar} alt={this.state.selected.name} />
+                  </div>
+                  <h4 style={styles.name}>{this.state.selected.name}</h4>
                 </div>
               </Popup>
             }
