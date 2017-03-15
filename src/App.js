@@ -14,7 +14,7 @@ class App extends Component {
           <div className="logo"><Logo fill="#ff3ccc" /></div>
           <Link to="/about">About</Link>
         </header>
-        <h1>{this.props.children}</h1>
+        <div>{this.props.children}</div>
       </div>
     );
   }
