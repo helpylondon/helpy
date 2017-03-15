@@ -27,12 +27,10 @@ class Support extends React.Component {
 
   render() {
     const classNames = ['support-map'];
-    const buttonClassnames = ['expand-button'];
     const buttonLabel = this.state.isExpanded ? 'Close' : 'Expand';
 
     if (this.state.isExpanded) {
       classNames.push('support-map-full');
-      buttonClassnames.push('collapse-button');
     }
 
     return (
@@ -46,14 +44,12 @@ class Support extends React.Component {
         </div>
 
         <div className="row center-xs mt-60">
-          <div className="col-xs-12">
-            <a href="#"
-              className={buttonClassnames.join(' ')}
-              onClick={this.onExpand.bind(this)}
-            >
-              {buttonLabel}
-            </a>
-          </div>
+          <a href="#"
+            className="expand-button"
+            onClick={this.onExpand.bind(this)}
+          >
+            {buttonLabel}
+          </a>
         </div>
         {/* <Profiles /> */}
       </article>

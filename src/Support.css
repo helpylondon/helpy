@@ -29,18 +29,12 @@
 }
 
 .expand-button {
-  position: relative;
+  position: absolute;
   z-index: 99999;
   background-color: #000;
   color: #fff;
   padding: 10px 25px;
   border-radius: 30px;
-  margin-top: 50px;
-}
-
-.collapse-button {
-  position: absolute;
-  transform: translateX(-50%);
   bottom: 100px;
 }
 
