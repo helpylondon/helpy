@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://henriquea.github.io/helpy",
   "devDependencies": {
+    "cross-env": "^3.2.4",
     "gh-pages": "^0.12.0",
     "react-scripts": "0.9.4"
   },
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

@@ -12,9 +12,8 @@ import './index.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
-    <Route path="/helpy" component={App}>
+    <Route path="/" component={App}>
       <IndexRoute component={Home}/>
-      <Route path="/" component={Home}/>
       <Route path="support" component={Support}/>
       <Route path="help" component={Help}/>
       <Route path="*" component={NoMatch}/>
