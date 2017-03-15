@@ -24,7 +24,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="home">
         <div className="row center-xs">
           <div className="col-xs-12 col-lg-6 mb-30">
             <p className="quote" ref={div => this.quote = div}>
