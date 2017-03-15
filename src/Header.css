@@ -5,27 +5,51 @@
   width: 100%;
   background-color: #fff;
   z-index: 999;
+  height: 110px;
 }
 
 .header-logo {
-  padding: 2.5em 2.5em 2.2em 2.5em;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.notification {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 .header-menu {
-  margin: 0;
+  margin: 0 auto;
   padding: 1em 2em;
   list-style: none;
 }
 
 .header-menu > li {
   display: inline-block;
-  margin-right: 1em;
+  margin-right: 3em;
+  font-size: 18px;
 }
 
 .header-menu > li:last-child {
   margin-right: 0;
 }
 
+.header-menu li a:hover {
+  color: #fb4958;
+}
+
 .red {
   color: #fb3958;
+}
+
+@media screen and (max-width: 56.250em) {
+
+}
+
+@media screen and (max-width: 50em) {
+  .header-menu {
+    display: none;
+  }
 }

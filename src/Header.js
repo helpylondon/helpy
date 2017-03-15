@@ -14,9 +14,12 @@ class Header extends Component {
           <div className="header-logo"><Logo fill="#ff3ccc" /></div>
         </Link>
         <ul className="header-menu">
-          <li><Link to="/support" activeClassName="red">I want help</Link></li>
+          <li><Link to="/support" activeClassName="red">I want to help</Link></li>
           <li><Link to="/help" activeClassName="red">I need help</Link></li>
         </ul>
+        <Link to="/">
+          <div className="notification"><img src="/img/notification.svg" width="50px" /></div>
+        </Link>
       </header>
     );
   }
