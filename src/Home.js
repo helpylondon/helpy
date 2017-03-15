@@ -10,7 +10,7 @@ class Home extends React.Component {
   componentDidMount() {
     // animate stuff here
     // this.title DOM
-    var tl = new TimelineMax({repeat:1}),
+    var tl = new TimelineMax(),
 				quote = this.quote,
 				img = this.image,
         btn = this.btn;
