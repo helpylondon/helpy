@@ -4,7 +4,8 @@ import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 
 import App from './App';
 import Home from './Home';
-import About from './About';
+import Support from './Support';
+import Help from './Help';
 import NoMatch from './NoMatch';
 
 import './index.css';
@@ -13,7 +14,8 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
-      <Route path="about" component={About}/>
+      <Route path="support" component={Support}/>
+      <Route path="help" component={Help}/>
       <Route path="*" component={NoMatch}/>
     </Route>
   </Router>,

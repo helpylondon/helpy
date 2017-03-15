@@ -45,3 +45,37 @@
   width: 30px;
   z-index: 3;
 }
+
+.profiles h2 {
+  color: #fb3958;
+}
+
+.v-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lee {
+  background: url('../public/img/lee.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.james {
+  background: url('../public/img/james.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.henrique {
+  background: url('../public/img/henrique.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.casey {
+  background: url('../public/img/casey.jpg');
+  background-position: center;
+  background-size: cover;
+}
