@@ -1,0 +1,22 @@
+.quote {
+  font-family: SofiaB;
+  font-size: 40px !important;
+  color: #fb3958;
+  text-align: left;
+  padding: 10% 15% 3% 20%;
+}
+
+@media screen and (max-width: 56.250em) {
+
+}
+
+@media screen and (max-width: 50em) {
+  .quote {
+    font-size: 30px !important;
+    padding: 0% 15% 5% 15%;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+}
