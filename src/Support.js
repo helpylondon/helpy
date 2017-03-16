@@ -13,10 +13,13 @@ const mapContainerStyle = {
   width: '100vw'
 };
 
+const center = [-0.10015363615130104,51.50210007442397];
+const zoom = [12];
+
 const styles = {
   marker: {
-    width: 20,
-    height: 20,
+    width: 15,
+    height: 15,
     borderRadius: '50%',
     backgroundColor: '#fb3958',
     display: 'flex',
@@ -48,14 +51,69 @@ const styles = {
 const data = {
   markers: [
     {
-      name: 'John Doe',
-      avatar: '/img/henrique.jpg',
-      coordinates: [-0.12915363615130104,51.51260007442397]
+      name: 'Lee',
+      avatar: '/img/Lee.jpg',
+      coordinates: [-0.07322890555778372,51.524086199842515]
     },
     {
-      name: 'James Kelly',
-      avatar: '/img/james.jpg',
-      coordinates: [-0.11084467200137738,51.51653575792807]
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.028426423655190547,51.477971782704316]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.0259913877221436,51.475307406513565]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.0417259025766441,51.47587007251278]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.13402774914393945,51.49820673627539]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.14278969368271532,51.49646082608146]
+    }, // new
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.13374222594075036,51.49665544149141]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.06971699636181938,51.472973380049694]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.056501514515190365,51.511659602794055]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.08354396866565139,51.512125160706404]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.11356385780473488,51.46326083359597]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.09676235183425774,51.50302198608628]
+    },
+    {
+      name: 'Ivo',
+      avatar: '/img/Ivo.jpg',
+      coordinates: [-0.11355665706233253,51.50055033141243]
     }
   ]
 }
@@ -98,6 +156,8 @@ class Support extends React.Component {
             style={mapStyle} // eslint-disable-line react/style-prop-object
             accessToken={accessToken}
             containerStyle={mapContainerStyle}
+            center={center}
+            zoom={zoom}
           >
 
             {data.markers.map((item, key) => {

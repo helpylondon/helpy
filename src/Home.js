@@ -22,8 +22,19 @@ class Home extends React.Component {
 
             // Animate Out
             // .to(quote, 1, { x:-300, alpha: 0, ease: Power2.easeInOut}, "+=4" )
-    				// .to(img, 1, { y:-500, alpha: 0, ease: Power2.easeInOut}, "-=0.7" )
-            // .to(btn, 1, { alpha:0 })
+    				// .to(img, 1, { y:500, alpha: 0, ease: Power2.easeInOut}, "-=0.7" )
+            // .to(btn, 1, { alpha:0, onComplete: newContent }, "-=0.7")
+
+            // function newContent() {
+        		// 		img.attr("src", img)
+        		// 		quote.html("These stories will change by being pulled from the database")
+        		// 		TweenMax.from(img, 1, { y:500, alpha: 0, ease: Power2.easeInOut})
+            //
+        		// 		tl.pause(0, true);
+        		// 		tl.play();
+        		// };
+
+
 
   }
 
@@ -35,6 +46,9 @@ class Home extends React.Component {
             <p className="quote" ref={div => this.quote = div}>
               Lee has been on the streets now for 2 years, and wants to become a lifeguard.
             </p>
+            {/* <p className="quote" ref={div => this.quote = div}>
+              Ivo travelled to London from Czech Republic. He had his passport and all belongings stolen
+            </p> */}
             <div ref={div => this.btn = div}>
               <Link to="/profile" className="button hvr-grow">Help Now</Link>
             </div>

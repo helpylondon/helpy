@@ -139,7 +139,7 @@ class Profile extends React.Component {
 
           <div className="col-xs-12 col-lg-4">
             <div className="item v-align">
-              <h1 className="red">Warm Meal</h1>
+              <h1 className="red">Helpy Card</h1>
               <span>Add</span>
             </div>
           </div>
